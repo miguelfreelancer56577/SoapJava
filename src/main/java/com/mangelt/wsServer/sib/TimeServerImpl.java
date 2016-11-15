@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.jws.WebService;
 
+import com.mangelt.wsServer.model.User;
 import com.mangelt.wsServer.sei.TimeServer;
 
 /**
@@ -26,6 +27,11 @@ public class TimeServerImpl implements TimeServer {
 	public long getTimeAsElapsed() {
 		// TODO return a date to time
 		return new Date().getTime();
+	}
+	
+	@Override
+	public User getUser(){
+		return new User("Miguel", "Torres");
 	}
 
 }
